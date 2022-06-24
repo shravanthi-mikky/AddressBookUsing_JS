@@ -96,6 +96,11 @@ function deleteContact(){
         }
     }
 }
+function displayContacts(){
+    for(let i=0;i<array.length;i++){
+        console.log(array[i]);
+    }
+}
 function countOfContacts(data) {
     return data.reduce((sum, a) => sum + 1, 0);
 }
