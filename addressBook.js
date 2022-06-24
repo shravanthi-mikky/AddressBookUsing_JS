@@ -88,9 +88,17 @@ function editContact(){
         }
     }
 }
+function deleteContact(){
+    var name = prompt("Please enter the firstname of contact you want to delete :");
+    for(let i=0;i<array.length;i++){
+        if(array[i].firstName == name){
+            array.splice(i,1);
+        }
+    }
+}
 while(true){
     console.log("Please choose the option");
-    var option = prompt("1)Display Contacts in AddressBook. \n2)Add Details in AddressBook\n3) Edit Contact using FirstName \n");
+    var option = prompt("1)Display Contacts in AddressBook. \n2)Add Details in AddressBook\n3) Edit Contact using FirstName\n4) Delete contact \n");
     switch(option){
         case "1":
             displayContacts();
@@ -100,6 +108,9 @@ while(true){
             break;
         case "3":
             editContact();
+            break;
+        case "4":
+            deleteContact();
             break;
     }
 }
