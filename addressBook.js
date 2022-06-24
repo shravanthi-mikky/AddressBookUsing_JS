@@ -39,3 +39,24 @@ array.push(contact1);
 array.push(contact2);
 array.push(contact3);
 console.log(array[0].firstName);
+function addDetails(){
+    var contact = new AddressBook();
+    contact.firstName = prompt("Please enter the firstName :");
+    contact.lastName = prompt("Please enter the lastName :");
+    contact.address = prompt("Please enter the address :");
+    contact.city = prompt("Please enter the city :");
+    contact.state = prompt("Please enter the state :");
+    contact.zip = prompt("Please enter the zip :");
+    contact.phoneNumber = prompt("Please enter the phoneNumber :");
+    contact.email = prompt("Please enter the email :");
+    array.push(contact);
+}
+while(true){
+    console.log("Please choose the option");
+    var option = prompt("1)Add Details in AddressBook\n");
+    switch(option){
+        case "1":
+            addDetails();
+            break;
+    }
+}
